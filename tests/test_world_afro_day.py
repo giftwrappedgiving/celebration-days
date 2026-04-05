@@ -36,6 +36,5 @@ class CelebrationDatasetTests(unittest.TestCase):
             "https://www.unep.org/events/un-day/world-environment-day",
         )
 
-
 if __name__ == "__main__":
     unittest.main()
