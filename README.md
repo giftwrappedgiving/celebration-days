@@ -45,6 +45,7 @@ Spotted a missing day or a mistake? PRs welcome!
 - Add new rows to `celebration-day.csv`
 - Stick to the existing format (check `schema.md`)
 - Bonus points for sourcing the official URL 🎯
+- Significant national days can stay in the main dataset while the list stays curated; split them out only if this grows into broad country-by-country public holiday coverage.
 
 ## Ideas / TODOs
 - Expand beyond books and literacy? (Health, environment, arts…)
