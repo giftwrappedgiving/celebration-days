@@ -1,59 +1,58 @@
 # celebration-days
 
-A dataset of celebration and awareness days — starting with those focused on books, reading, literacy, and libraries 📚✨
+A dataset project for celebration/awareness days and notable historical figures.
 
-## What's in here?
+## Repository structure
 
-This repository contains:
-- `schema.md` — the data structure and field definitions.
-- `celebration-day.csv` — the dataset of celebration days with key details like dates (or rules if the date isn't fixed), organisations, hashtags, and audiences.
+```text
+.
+├── data/
+│   ├── celebration-day.csv
+│   └── historical-figure.csv
+├── schema/
+│   ├── celebration-day.schema.md
+│   └── historical-figure.schema.md
+├── python/
+│   ├── pyproject.toml
+│   ├── README.md
+│   └── src/celebration_days/
+├── requirements/
+├── tests/
+├── Makefile
+└── README.md
+```
 
-The goal is to provide a clean, reusable dataset for anyone planning content, events, or campaigns around important days.
+## Datasets
 
-## Fields captured in the dataset
-Each record in `celebration-day.csv` includes:
-- `reference` — unique ID for the day
-- `name` — name of the celebration day
-- `description` — what it’s all about
-- `countries` — where it’s observed
-- `categories` — themes like literacy, books, libraries
-- `date-type` — `fixed` or `dynamic`
-- `event-date` — fixed date (if applicable, format: MM-DD)
-- `date-rule` — rule for dynamic dates (e.g., "First Thursday in March")
-- `first-date` — year it started
-- `organisation` — who runs or recognises it
-- `url` — official link
-- `hashtags` — common social tags
-- `audience-types` — who it’s aimed at
-- `notes` — anything else useful
+- `data/celebration-day.csv`: celebration and awareness days.
+- `data/historical-figure.csv`: historically significant people with birthdays and Wikipedia URLs.
 
-See `schema.md` for full definitions.
+## Schemas
 
-## Why does this exist?
+- `schema/celebration-day.schema.md`
+- `schema/historical-figure.schema.md`
 
-Because we (GWG) wanted a list of celebration days
+## Python package
 
-This dataset might help:
-✅ Content planners  
-✅ Educators and librarians  
-✅ Campaigners  
-✅ Curious data nerds  
+Python interfaces live in `python/src/celebration_days`.
 
-## Contributing
+Quick start:
 
-Spotted a missing day or a mistake? PRs welcome!
-- Add new rows to `celebration-day.csv`
-- Stick to the existing format (check `schema.md`)
-- Bonus points for sourcing the official URL 🎯
+```bash
+cd python
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+python -m celebration_days.main
+```
 
-## Ideas / TODOs
-- Expand beyond books and literacy? (Health, environment, arts…)
-- Add iCal / JSON export
-- Auto-calculate dynamic dates per year?
+## Development
 
-## Licence
-MIT — do what you like, just don’t blame us if you turn up to *World Book Day* in fancy dress on the wrong day.
+Install shared dev dependencies and run tests:
 
----
+```bash
+make init
+make tests
+```
 
-Pull requests, ideas, and celebration day suggestions always welcome 🎉
+Current tests validate the canonical dataset files in `data/`.

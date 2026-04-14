@@ -1,0 +1,18 @@
+/tmp
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+stylesheets/*.css
+.webassets-cache
+node_modules
+
+package-lock.json
+
+.vscode
+node_modules
+
+.codex/
+python/.venv/
