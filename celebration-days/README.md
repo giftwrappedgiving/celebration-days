@@ -12,7 +12,8 @@ celebration-days
 │   ├── celebration_interface.py
 │   └── utils.py
 ├── data
-│   └── celebration-day.csv
+│   ├── celebration-day.csv
+│   └── historical-figure.csv
 ├── requirements.txt
 └── README.md
 ```
