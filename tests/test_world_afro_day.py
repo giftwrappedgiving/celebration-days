@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 
-DATASET_PATH = Path(__file__).resolve().parents[1] / "celebration-day.csv"
+DATASET_PATH = Path(__file__).resolve().parents[1] / "data" / "celebration-day.csv"
 
 
 class CelebrationDatasetTests(unittest.TestCase):
